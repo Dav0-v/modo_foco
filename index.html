@@ -742,7 +742,7 @@ details[open] summary::after{content:"\2212"}
   /* botón del informe: se activa solo si informe.pdf está publicado junto a la página */
   var dl = document.getElementById('dl'), dlt = document.getElementById('dltxt');
   if(dl && window.fetch){
-    fetch('Informe.pdf', {method:'HEAD'}).then(function(r){
+    fetch('informe.pdf', {method:'HEAD'}).then(function(r){
       if(r.ok){ dl.removeAttribute('aria-disabled'); if(dlt) dlt.textContent = 'Descargar informe (PDF)'; }
     }).catch(function(){});
   }
